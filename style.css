@@ -1,0 +1,115 @@
+/* basic css so that webpage looks a bit better*/
+
+body{
+    max-width: 80%;
+    margin: auto;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+label{
+    font-size: larger;
+}
+
+th{
+    background-color: blue;
+    color: white;
+    padding: 10px;
+}
+
+tr:nth-child(odd){
+    background-color: lightblue;
+}
+
+tr:nth-child(even){
+    background-color: lightskyblue;
+}
+
+table{
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0 15px;
+}
+
+td { 
+    text-align: center;
+    vertical-align: middle;
+    padding: 5px 0px;
+}
+
+.input{
+    padding: 10px;
+}
+
+#description{
+    width: 70%;
+}
+
+#email{
+    width: 30%;
+}
+
+.button{
+    background-color: blue;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-weight: bold;
+    margin: 20px 0px;
+    padding: 10px;
+}
+
+.button a{
+    color: white;
+}
+
+.back{
+    text-align: center;
+    width: 100%;
+    background-color: blue;
+    padding: 10px;
+    color: white;
+    font-size: larger;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 0 0 20px 20px;
+}
+
+.success{
+    text-align: center;
+    width: 100%;
+    background-color: rgb(199, 255, 199);
+    padding: 10px;
+    color: green;
+    font-size: medium;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.error{
+    text-align: center;
+    width: 100%;
+    background-color: rgb(255, 197, 197);
+    padding: 10px;
+    color: red;
+    font-size: medium;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 20px;
+}
+
+.tablebutton{
+    background-color: blue;
+    color: white;
+    padding: 2px 30px;
+    font-weight: bold;
+    text-decoration: none;
+    border-radius: 30px;
+}
+
+select{
+    width: 20%;
+}
+input{
+    width: 20%;
+}

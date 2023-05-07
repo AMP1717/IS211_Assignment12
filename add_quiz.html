@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add quiz page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <a href="{{url_for('dashboard')}}"><div class="back"><  Go back to dashboard</div></a>
+    <h1>Add quiz</h1>
+    <form method="post">
+        <label>Subject:</label><br>
+        <input type="text" name="subject" required><br><br>
+        
+        <label>Number of questions:</label><br>
+        <input type="number" name="number" min="1" max="1000" required><br><br>
+
+        <label>Date:</label><br>
+        <input type="date" name="date" required><br><br>
+
+        <input type="submit" value="Add quiz" class="button">
+    </form>
+</body>
+</html>

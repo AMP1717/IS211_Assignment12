@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add student page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <a href="{{url_for('dashboard')}}"><div class="back"><  Go back to dashboard</div></a>
+    <h1>Add student</h1>
+    <form method="post">
+        <label>First name:</label><br>
+        <input type="text" name="first_name" required><br><br>
+        
+        <label>Last name:</label><br>
+        <input type="text" name="last_name" required><br><br>
+        
+        <input type="submit" value="Add student">
+    </form>
+</body>
+</html>

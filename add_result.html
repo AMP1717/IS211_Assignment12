@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Add result page</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <a href="{{url_for('dashboard')}}"><div class="back"><  Go back to dashboard</div></a>
+    <h1>Add result</h1>
+    <form method="post">
+        <label for="student">Select student:</label><br>
+        <select name="student">
+        {% for student in students %}
+            <option value="{{ student[0] }}">{{ student[1] }}</option>
+        {% endfor %}
+        </select><br><br>
+        
+        <label for="quiz">Select quiz:</label><br>
+        <select name="quiz">
+        {% for quiz in quizes %}
+            <option value="{{ quiz[0] }}">{{ quiz[1] }}</option>
+        {% endfor %}
+        </select><br><br>
+
+        <label>Score:</label><br>
+        <input type="number" name="score" min="1" max="100" required><br><br>
+
+        <input type="submit" value="Add result">
+    </form>
+</body>
+</html>

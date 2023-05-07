@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Student detail</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    
+    <a href="{{url_for('dashboard')}}"><div class="back"><  Go back to dashboard</div></a>
+    {% if student %}
+    <div>
+        <h1>Student ID: {{student[0]}}</h1>
+        <h2>First name: {{student[1]}}</h2>
+        <h2>Last name:  {{student[2]}}</h2>
+    </div>
+        {% if results %}
+        <table>
+            <tr>
+                <th style="width:10%">Quiz ID</th>
+                <th style="width:60%">Subject</th>
+                <th style="width:30%">Score</th>
+            </tr>
+            {% for result in results %}
+            <tr>
+                <td>{{ result["quiz_id"] }}</td>
+                <td>{{ result["subject"] }}</td>
+                <td>{{ result["score"] }}</td>
+            </tr>
+            {% endfor %}
+        </table>
+        {% else %}
+            <h1>This student has no quiz results.</h1>
+        {% endif %}
+    {% else %}
+        <h1>No student with this ID.</h1>
+    {% endif %}
+</body>
+</html>
